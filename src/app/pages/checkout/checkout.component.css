@@ -1,0 +1,7 @@
+#cart-summary{
+    width: 100%;
+}
+#totalPrice{
+    float: left;
+    margin-top: 8px;
+}
