@@ -4,7 +4,9 @@ import { IntroductionComponent } from './pages/introduction/introduction.compone
 import { ShopComponent } from './pages/shop/shop.component';
 import { AuthorsComponent } from './pages/authors/authors.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component'
+import { LandingComponent } from './pages/landing/landing.component';
 const routes: Routes = [
+  {path: '', component: LandingComponent},
   {path: 'who-we-are', component: IntroductionComponent},
   {path: 'shopping-time', component: ShopComponent},
   {path: 'find-authors', component: AuthorsComponent},

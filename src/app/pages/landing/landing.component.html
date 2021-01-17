@@ -1,0 +1,29 @@
+<div id="banner">
+    <img id="mainPicture" src="../../../assets/images/cropped.jpg">
+    <div class="centered">
+     <h1 id="banner_header">My Book Store</h1>   
+     <h3>How it started</h3>
+    </div>
+</div>
+<mat-grid-list [cols]="breakpoint" (window:resize)="onResize()">
+    <mat-grid-tile *ngFor="let navigation of navigations" class="navigations-card">
+        <mat-card class="mat-card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{navigation.name}}
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content"> 
+            <img class="navigation_img" src="{{navigation.image}}">
+            </mat-card-content>
+            <mat-card-actions class="card-action">
+        <a mat-button mat-raised-button color="warn" routerLink="{{navigation.url}}">Go</a>
+        </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+#mainPicture{
+   width: 100%;
+}
+
+#banner{
+   position: relative;
+   text-align: center;
+   color: white; 
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#banner_header{
+    font-size: 50px;
+    line-height: 50px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+h3{
+    font-size: 50px;
+    line-height: 50px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+#text{
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:25px;
+}

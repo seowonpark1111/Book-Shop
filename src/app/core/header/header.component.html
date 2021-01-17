@@ -1,4 +1,5 @@
-<mat-toolbar color="primary">
+
+<mat-toolbar *ngIf="collapse==false" color="primary"(window:resize)="onResize()">
     <a mat-button routerLink="/">
       <mat-icon>
         home
@@ -6,17 +7,66 @@
       My Book shop
     </a>
       <a mat-button routerLink="/who-we-are">
-      <mat-icon>face</mat-icon>
+      <mat-icon>
+        face
+      </mat-icon>
       Who We Are
       </a>
       <a mat-button routerLink="/shopping-time">
-      <mat-icon>shopping_cart</mat-icon>
+      <mat-icon>
+        shopping_cart
+      </mat-icon>
       Shopping time
       </a> 
       <a mat-button routerLink='/find-authors'>
-      <mat-icon>book</mat-icon>
+      <mat-icon>
+        book
+      </mat-icon>
       Find authors
       </a>
       <app-shopping-cart></app-shopping-cart>
   </mat-toolbar>
+  <mat-toolbar *ngIf="collapse==true" color="primary" (window:resize)="onResize()">
+    <div>
+      <mat-toolbar-row>
+        <a mat-button (click)="mainToggle()">
+          <mat-icon>menu</mat-icon>
+          </a>
+      </mat-toolbar-row>
+    </div>
+     <div *ngIf="toggle==true">
+       <mat-toolbar-row>
+        <a mat-button routerLink="/">
+          <mat-icon>
+            home
+          </mat-icon>
+          My Book shop
+        </a>
+       </mat-toolbar-row>
+       <mat-toolbar-row>
+        <a mat-button routerLink="/who-we-are">
+          <mat-icon>face</mat-icon>
+          Who We Are
+          </a>
+       </mat-toolbar-row>
+       <mat-toolbar-row>
+        <a mat-button routerLink="/shopping-time">
+          <mat-icon>shopping_cart</mat-icon>
+          Shopping time
+          </a> 
+       </mat-toolbar-row>
+       <mat-toolbar-row>
+        <a mat-button routerLink='/find-authors'>
+          <mat-icon>book</mat-icon>
+          Find authors
+          </a>
+       </mat-toolbar-row>
+     </div>
+      <app-shopping-cart></app-shopping-cart>
+  </mat-toolbar>
+
+  
+ 
+  
+
   

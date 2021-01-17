@@ -12,6 +12,7 @@
     <input type="hidden" name="tax_rate" value="6.000">
     <input type="hidden" name="shipping" value="22.00">
     <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+    <input type="hidden" name="address" value="{{streetAddress}}, {{city}}, {{state}} {{zipCode}}">
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
@@ -40,9 +41,20 @@
 </table>
 
 <div>
-    <form id="">
-        <mat-form-field class="example-full-width">
-          <mat-label>Favorite food</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi">
+        <h2>Destination</h2>
+        <mat-form-field apperance="standard">
+          <mat-label>Street Address</mat-label>
+          <input name="street Address" type="text" matInput placeholder="1234 Mainstreet" [(ngModel)]="streetAddress">
         </mat-form-field>
+        <mat-form-field id="city-field">
+            <mat-label>City</mat-label>
+            <input name="city" type="text" matInput placeholder="City" [(ngModel)]="city">
+          </mat-form-field>
+          <mat-form-field id="zipcode-field"><mat-label>State</mat-label>
+            <input name="state" type="text" matInput placeholder="City" [(ngModel)]="state">
+          </mat-form-field>
+          <mat-form-field id="zipcode-field">
+            <mat-label>Zipcode</mat-label>
+            <input name="zipCode" type="number" matInput placeholder="City" [(ngModel)]="zipCode">
+          </mat-form-field>
 </div>

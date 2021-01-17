@@ -17,6 +17,9 @@ products=[];
  
   ngOnInit(): void {
     this.products=this.productService.getProducts();
+
+      this.onResize();
+
   }
 onResize(){
   console.log(window.innerWidth);

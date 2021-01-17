@@ -11,6 +11,11 @@ export class CheckoutComponent implements OnInit {
   displayedColumns=[];
 
   totalPrice:number=0;
+  streetAddress:string='';
+  city:string='';
+  state:string='';
+  zipCode:number;
+
   constructor(private _productService:ProductService) { }
 
   ngOnInit(): void {

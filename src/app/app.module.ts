@@ -54,7 +54,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingCartComponent } from './core/shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component'
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { LandingComponent } from './pages/landing/landing.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import { CheckoutComponent } from './pages/checkout/checkout.component'
     AuthorsComponent,
     ShoppingCartComponent,
     HeaderComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
